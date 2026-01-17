@@ -1,0 +1,146 @@
+<!-- privacy.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Privacy Policy — Speech Pacer</title>
+  <style>
+    :root{
+      --bg0:#0b1320; --bg1:#0e1623; --line:rgba(255,255,255,.12);
+      --text:rgba(255,255,255,.88); --muted:rgba(255,255,255,.62);
+      --card:rgba(255,255,255,.06); --card2:rgba(255,255,255,.04);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(800px 500px at 10% 0%, rgba(219,244,255,.12), transparent 60%),
+        radial-gradient(900px 650px at 50% 110%, rgba(59,130,246,.22), transparent 65%),
+        linear-gradient(180deg, var(--bg1) 0%, var(--bg1) 55%, var(--bg0) 100%);
+    }
+    a{color:rgba(219,244,255,.92); text-decoration:none}
+    a:hover{text-decoration:underline}
+    header{padding:22px 20px 8px; max-width:980px; margin:0 auto}
+    main{max-width:980px; margin:0 auto; padding:8px 20px 40px}
+    .topbar{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .back{padding:10px 12px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.04)}
+    h1{margin:14px 0 6px; font-size:22px}
+    .meta{color:var(--muted); font-size:13px; line-height:1.6}
+    .card{
+      margin-top:14px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg,var(--card) 0%, var(--card2) 100%);
+      border-radius:var(--radius);
+      padding:16px;
+    }
+    h2{margin:0 0 10px; font-size:16px}
+    p,li{color:var(--muted); line-height:1.7}
+    ul{margin:8px 0 0 18px}
+    .strong{color:var(--text)}
+    footer{max-width:980px; margin:0 auto; padding:12px 20px 28px; color:var(--muted); font-size:13px}
+    code{color:rgba(255,255,255,.85)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <a class="back" href="./index.html">← Back</a>
+    </div>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      App: <span class="strong">Speech Pacer</span><br/>
+      Operator: <span class="strong">NAME</span><br/>
+      Effective date: <span class="strong">YYYY-MM-DD</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>1. Overview</h2>
+      <p>
+        Speech Pacer is designed to work without collecting or selling personal data.
+        The app does not require an account and does not use advertising SDKs.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>2. Data We Handle</h2>
+      <p class="strong">On-device only (stored locally)</p>
+      <ul>
+        <li>Script text you paste into the app</li>
+        <li>Section list and per-section durations</li>
+        <li>Last selected section index (optional)</li>
+        <li>App settings related to pacing</li>
+      </ul>
+      <p>
+        These items are stored locally on your device (e.g., via <code>SharedPreferences</code>) to improve usability.
+        <span class="strong">We do not transmit this content to our servers.</span>
+      </p>
+
+      <p class="strong" style="margin-top:12px;">Not collected</p>
+      <ul>
+        <li>No name, email, phone number</li>
+        <li>No location data</li>
+        <li>No microphone or audio recording</li>
+        <li>No analytics / tracking identifiers</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>3. Permissions</h2>
+      <ul>
+        <li><span class="strong">Vibration</span>: Used to cue section transitions.</li>
+        <li><span class="strong">Screen awake</span>: Used during pacing to prevent screen sleep.</li>
+      </ul>
+      <p>No other permissions are required.</p>
+    </section>
+
+    <section class="card">
+      <h2>4. Third-Party Services</h2>
+      <p>
+        Speech Pacer does not integrate third-party analytics, ads, or tracking SDKs.
+        App distribution is handled by Apple App Store / Google Play, which may process purchase and device information under their own policies.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>5. Data Retention</h2>
+      <p>
+        Local data remains on your device until you delete it by removing the app or clearing app data via your device settings.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>6. Children</h2>
+      <p>
+        The app is not directed to children under the minimum age required by applicable law for consent.
+        We do not knowingly collect personal data from children.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>7. Changes</h2>
+      <p>
+        We may update this Privacy Policy to reflect changes to the app. The effective date will be updated accordingly.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>8. Contact</h2>
+      <p>
+        If you have questions about this Privacy Policy, contact:<br/>
+        <span class="strong">NAME</span><br/>
+        <span class="strong">CONTACT_EMAIL</span>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="y"></span> NAME.</div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+  </footer>
+</body>
+</html>
